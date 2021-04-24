@@ -1,0 +1,11 @@
+name: SimpleCosmetics
+version: '1.0'
+main: me.refrac.cosmetics.Cosmetics
+
+commands:
+  cosmetics:
+    aliases:
+      - trails
+  cosmeticsreload:
+    aliases:
+      - trailsreload

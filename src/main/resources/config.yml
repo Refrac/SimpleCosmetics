@@ -1,0 +1,35 @@
+# SimpleCosmetics 1.0
+# If you have suggestions put them in my discord:
+# https://discord.gg/mUKjWZByzQ
+
+Messages:
+  APPLY-TRAIL: "&aApplied the {trail} trail."
+  REMOVE-TRAIL: "&cRemoved the {trail} trail."
+  REMOVE-ALL-TRAILS: "&cRemoved your trail."
+  NO-ACTIVE-TRAIL: "&cYou don't have an active trail."
+  RELOAD: "&aConfig files reloaded. Changes should be live in-game!"
+  NO-PERMISSION: "&cYou don't have permission to use this trail."
+
+TrailsMenu:
+  TITLE: "&c&lTrails Menu"
+  FLAME:
+    NAME: "&6Flame Trail"
+    LORE: "&7Click to apply the Flame Trail."
+  HEART:
+    NAME: "&6Heart Trail"
+    LORE: "&7Click to apply the Heart Trail."
+  SLIME:
+    NAME: "&6Slime Trail"
+    LORE: "&7Click to apply the Slime Trail."
+  SMOKE:
+    NAME: "&6Smoke Trail"
+    LORE: "&7Click to apply the Smoke Trail."
+  CRITICAL:
+    NAME: "&6Critical Trail"
+    LORE: "&7Click to apply the Critical Trail."
+  NOTES:
+    NAME: "&6Notes Trail"
+    LORE: "&7Click to apply the Notes Trail."
+  REMOVE-TRAIL:
+    NAME: "&cRemove Trail"
+    LORE: "&7Remove your trail."
