@@ -30,6 +30,15 @@ TrailsMenu:
   NOTES:
     NAME: "&6Notes Trail"
     LORE: "&7Click to apply the Notes Trail."
+  LAVA:
+    NAME: "&6Lava Trail"
+    LORE: "&7Click to apply the Lava Trail."
+  WATER:
+    NAME: "&6Water Trail"
+    LORE: "&7Click to apply the Water Trail."
+  CLOUD:
+    NAME: "&6Cloud Trail"
+    LORE: "&7Click to apply the Cloud Trail."
   REMOVE-TRAIL:
     NAME: "&cRemove Trail"
     LORE: "&7Remove your trail."

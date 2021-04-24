@@ -76,4 +76,29 @@ public class Trails {
                 ))
                 .toItemStack();
     }
+
+    public static ItemStack lavaTrail() {
+        return new ItemBuilder(Material.LAVA_BUCKET)
+                .setName(Cosmetics.getInstance().getConfig().getString("TrailsMenu.LAVA.NAME").replace("&", "§"))
+                .setLore(Arrays.asList(
+                        Cosmetics.getInstance().getConfig().getString("TrailsMenu.LAVA.LORE").replace("&", "§")
+                ))
+                .toItemStack();
+    }
+    public static ItemStack waterTrail() {
+        return new ItemBuilder(Material.WATER_BUCKET)
+                .setName(Cosmetics.getInstance().getConfig().getString("TrailsMenu.WATER.NAME").replace("&", "§"))
+                .setLore(Arrays.asList(
+                        Cosmetics.getInstance().getConfig().getString("TrailsMenu.WATER.LORE").replace("&", "§")
+                ))
+                .toItemStack();
+    }
+    public static ItemStack cloudTrail() {
+        return new ItemBuilder(Material.BEACON)
+                .setName(Cosmetics.getInstance().getConfig().getString("TrailsMenu.CLOUD.NAME").replace("&", "§"))
+                .setLore(Arrays.asList(
+                        Cosmetics.getInstance().getConfig().getString("TrailsMenu.CLOUD.LORE").replace("&", "§")
+                ))
+                .toItemStack();
+    }
 }

@@ -1,5 +1,5 @@
 name: SimpleCosmetics
-version: '1.0'
+version: '1.1'
 main: me.refrac.cosmetics.Cosmetics
 
 commands:

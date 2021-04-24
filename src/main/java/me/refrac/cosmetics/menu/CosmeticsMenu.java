@@ -39,6 +39,9 @@ public class CosmeticsMenu implements Listener {
         inv.setItem(3, Trails.smokeTrail());
         inv.setItem(4, Trails.criticalTrail());
         inv.setItem(5, Trails.notesTrail());
+        inv.setItem(6, Trails.lavaTrail());
+        inv.setItem(7, Trails.waterTrail());
+        inv.setItem(8, Trails.cloudTrail());
         inv.setItem(31, Trails.removeTrailsItem());
 
         for (int i = 0; i < 36; ++i) {
@@ -72,12 +75,8 @@ public class CosmeticsMenu implements Listener {
         if (event.getCurrentItem().isSimilar(Trails.flameTrail())) {
             if (player.hasPermission("simplecosmetics.trails.flame")) {
                 if (!Utils.flame.contains(player.getName())) {
+                    Utils.removeTrails(player);
                     Utils.flame.add(player.getName());
-                    Utils.heart.remove(player.getName());
-                    Utils.slime.remove(player.getName());
-                    Utils.smoke.remove(player.getName());
-                    Utils.critical.remove(player.getName());
-                    Utils.notes.remove(player.getName());
                     player.sendMessage(Utils.PREFIX + Utils.getColor(Cosmetics.getInstance().getConfig().getString("Messages.APPLY-TRAIL").replace("{trail}", "flame")));
                 } else {
                     Utils.flame.remove(player.getName());
@@ -89,12 +88,8 @@ public class CosmeticsMenu implements Listener {
         } else if (event.getCurrentItem().isSimilar(Trails.heartTrail())) {
             if (player.hasPermission("simplecosmetics.trails.heart")) {
                 if (!Utils.heart.contains(player.getName())) {
+                    Utils.removeTrails(player);
                     Utils.heart.add(player.getName());
-                    Utils.flame.remove(player.getName());
-                    Utils.slime.remove(player.getName());
-                    Utils.smoke.remove(player.getName());
-                    Utils.critical.remove(player.getName());
-                    Utils.notes.remove(player.getName());
                     player.sendMessage(Utils.PREFIX + Utils.getColor(Cosmetics.getInstance().getConfig().getString("Messages.APPLY-TRAIL").replace("{trail}", "heart")));
                 } else {
                     Utils.heart.remove(player.getName());
@@ -106,12 +101,8 @@ public class CosmeticsMenu implements Listener {
         } else if (event.getCurrentItem().isSimilar(Trails.slimeTrail())) {
             if (player.hasPermission("simplecosmetics.trails.slime")) {
                 if (!Utils.slime.contains(player.getName())) {
+                    Utils.removeTrails(player);
                     Utils.slime.add(player.getName());
-                    Utils.flame.remove(player.getName());
-                    Utils.heart.remove(player.getName());
-                    Utils.smoke.remove(player.getName());
-                    Utils.critical.remove(player.getName());
-                    Utils.notes.remove(player.getName());
                     player.sendMessage(Utils.PREFIX + Utils.getColor(Cosmetics.getInstance().getConfig().getString("Messages.APPLY-TRAIL").replace("{trail}", "slime")));
                 } else {
                     Utils.slime.remove(player.getName());
@@ -123,12 +114,8 @@ public class CosmeticsMenu implements Listener {
         } else if (event.getCurrentItem().isSimilar(Trails.smokeTrail())) {
             if (player.hasPermission("simplecosmetics.trails.smoke")) {
                 if (!Utils.smoke.contains(player.getName())) {
+                    Utils.removeTrails(player);
                     Utils.smoke.add(player.getName());
-                    Utils.flame.remove(player.getName());
-                    Utils.heart.remove(player.getName());
-                    Utils.slime.remove(player.getName());
-                    Utils.critical.remove(player.getName());
-                    Utils.notes.remove(player.getName());
                     player.sendMessage(Utils.PREFIX + Utils.getColor(Cosmetics.getInstance().getConfig().getString("Messages.APPLY-TRAIL").replace("{trail}", "smoke")));
                 } else {
                     Utils.smoke.remove(player.getName());
@@ -140,12 +127,8 @@ public class CosmeticsMenu implements Listener {
         } else if (event.getCurrentItem().isSimilar(Trails.criticalTrail())) {
             if (player.hasPermission("simplecosmetics.trails.critical")) {
                 if (!Utils.critical.contains(player.getName())) {
+                    Utils.removeTrails(player);
                     Utils.critical.add(player.getName());
-                    Utils.flame.remove(player.getName());
-                    Utils.heart.remove(player.getName());
-                    Utils.slime.remove(player.getName());
-                    Utils.smoke.remove(player.getName());
-                    Utils.notes.remove(player.getName());
                     player.sendMessage(Utils.PREFIX + Utils.getColor(Cosmetics.getInstance().getConfig().getString("Messages.APPLY-TRAIL").replace("{trail}", "critical")));
                 } else {
                     Utils.critical.remove(player.getName());
@@ -157,12 +140,8 @@ public class CosmeticsMenu implements Listener {
         } else if (event.getCurrentItem().isSimilar(Trails.notesTrail())) {
             if (player.hasPermission("simplecosmetics.trails.notes")) {
                 if (!Utils.notes.contains(player.getName())) {
+                    Utils.removeTrails(player);
                     Utils.notes.add(player.getName());
-                    Utils.flame.remove(player.getName());
-                    Utils.heart.remove(player.getName());
-                    Utils.slime.remove(player.getName());
-                    Utils.smoke.remove(player.getName());
-                    Utils.critical.remove(player.getName());
                     player.sendMessage(Utils.PREFIX + Utils.getColor(Cosmetics.getInstance().getConfig().getString("Messages.APPLY-TRAIL").replace("{trail}", "notes")));
                 } else {
                     Utils.notes.remove(player.getName());
@@ -171,15 +150,50 @@ public class CosmeticsMenu implements Listener {
             } else {
                 player.sendMessage(Utils.getColor(Cosmetics.getInstance().getConfig().getString("Messages.NO-PERMISSION")));
             }
+        } else if (event.getCurrentItem().isSimilar(Trails.lavaTrail())) {
+            if (player.hasPermission("simplecosmetics.trails.lava")) {
+                if (!Utils.lava.contains(player.getName())) {
+                    Utils.removeTrails(player);
+                    Utils.lava.add(player.getName());
+                    player.sendMessage(Utils.PREFIX + Utils.getColor(Cosmetics.getInstance().getConfig().getString("Messages.APPLY-TRAIL").replace("{trail}", "lava")));
+                } else {
+                    Utils.lava.remove(player.getName());
+                    player.sendMessage(Utils.PREFIX + Utils.getColor(Cosmetics.getInstance().getConfig().getString("Messages.REMOVE-TRAIL").replace("{trail}", "lava")));
+                }
+            } else {
+                player.sendMessage(Utils.getColor(Cosmetics.getInstance().getConfig().getString("Messages.NO-PERMISSION")));
+            }
+        } else if (event.getCurrentItem().isSimilar(Trails.waterTrail())) {
+            if (player.hasPermission("simplecosmetics.trails.water")) {
+                if (!Utils.water.contains(player.getName())) {
+                    Utils.removeTrails(player);
+                    Utils.water.add(player.getName());
+                    player.sendMessage(Utils.PREFIX + Utils.getColor(Cosmetics.getInstance().getConfig().getString("Messages.APPLY-TRAIL").replace("{trail}", "water")));
+                } else {
+                    Utils.water.remove(player.getName());
+                    player.sendMessage(Utils.PREFIX + Utils.getColor(Cosmetics.getInstance().getConfig().getString("Messages.REMOVE-TRAIL").replace("{trail}", "water")));
+                }
+            } else {
+                player.sendMessage(Utils.getColor(Cosmetics.getInstance().getConfig().getString("Messages.NO-PERMISSION")));
+            }
+        } else if (event.getCurrentItem().isSimilar(Trails.cloudTrail())) {
+            if (player.hasPermission("simplecosmetics.trails.cloud")) {
+                if (!Utils.cloud.contains(player.getName())) {
+                    Utils.removeTrails(player);
+                    Utils.cloud.add(player.getName());
+                    player.sendMessage(Utils.PREFIX + Utils.getColor(Cosmetics.getInstance().getConfig().getString("Messages.APPLY-TRAIL").replace("{trail}", "cloud")));
+                } else {
+                    Utils.cloud.remove(player.getName());
+                    player.sendMessage(Utils.PREFIX + Utils.getColor(Cosmetics.getInstance().getConfig().getString("Messages.REMOVE-TRAIL").replace("{trail}", "cloud")));
+                }
+            } else {
+                player.sendMessage(Utils.getColor(Cosmetics.getInstance().getConfig().getString("Messages.NO-PERMISSION")));
+            }
         } else if (event.getCurrentItem().isSimilar(Trails.removeTrailsItem())) {
             if (Utils.flame.contains(player.getName()) || Utils.heart.contains(player.getName()) || Utils.slime.contains(player.getName()) ||
-                    Utils.smoke.contains(player.getName()) || Utils.critical.contains(player.getName()) || Utils.notes.contains(player.getName())) {
-                Utils.flame.remove(player.getName());
-                Utils.heart.remove(player.getName());
-                Utils.slime.remove(player.getName());
-                Utils.smoke.remove(player.getName());
-                Utils.critical.remove(player.getName());
-                Utils.notes.remove(player.getName());
+                    Utils.smoke.contains(player.getName()) || Utils.critical.contains(player.getName()) || Utils.notes.contains(player.getName()) ||
+                    Utils.lava.contains(player.getName()) || Utils.water.contains(player.getName()) || Utils.cloud.contains(player.getName())) {
+                Utils.removeTrails(player);
                 player.sendMessage(Utils.PREFIX + Utils.getColor(Cosmetics.getInstance().getConfig().getString("Messages.REMOVE-ALL-TRAILS")));
             } else {
                 player.sendMessage(Utils.getColor(Cosmetics.getInstance().getConfig().getString("Messages.NO-ACTIVE-TRAIL")));

@@ -34,10 +34,19 @@ public class ParticleListener implements Listener {
             player.playEffect(player.getLocation(), Effect.SMOKE, 0);
         }
         if (Utils.critical.contains(player.getName())) {
-            player.playEffect(player.getLocation(), Effect.CRIT, 0);
+            player.playEffect(player.getLocation(), Effect.MAGIC_CRIT, 0);
         }
         if (Utils.notes.contains(player.getName())) {
             player.playEffect(player.getLocation(), Effect.NOTE, 0);
+        }
+        if (Utils.lava.contains(player.getName())) {
+            player.playEffect(player.getLocation(), Effect.LAVADRIP, 0);
+        }
+        if (Utils.water.contains(player.getName())) {
+            player.playEffect(player.getLocation(), Effect.WATERDRIP, 0);
+        }
+        if (Utils.cloud.contains(player.getName())) {
+            player.playEffect(player.getLocation(), Effect.VILLAGER_THUNDERCLOUD, 0);
         }
     }
 
@@ -45,12 +54,7 @@ public class ParticleListener implements Listener {
     public void onPlayerQuit(PlayerQuitEvent event) {
         Player player = event.getPlayer();
 
-        Utils.flame.remove(player.getName());
-        Utils.heart.remove(player.getName());
-        Utils.slime.remove(player.getName());
-        Utils.smoke.remove(player.getName());
-        Utils.critical.remove(player.getName());
-        Utils.notes.remove(player.getName());
+        Utils.removeTrails(player);
     }
 
 }
