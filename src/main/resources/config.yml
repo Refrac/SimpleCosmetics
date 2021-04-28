@@ -2,43 +2,62 @@
 # If you have suggestions put them in my discord:
 # https://discord.gg/mUKjWZByzQ
 
+configVersion: 1.2
+# DO NOT CHANGE PLEASE.
+
+Update:
+  Enabled: true
+# Enables if there is an update on join
+
 Messages:
   APPLY-TRAIL: "&aApplied the {trail} trail."
   REMOVE-TRAIL: "&cRemoved the {trail} trail."
   REMOVE-ALL-TRAILS: "&cRemoved your trail."
   NO-ACTIVE-TRAIL: "&cYou don't have an active trail."
   RELOAD: "&aConfig files reloaded. Changes should be live in-game!"
-  NO-PERMISSION: "&cYou don't have permission to use this trail."
+  NO-PERMISSION: "&cYou don't have permission to use this cosmetic."
 
 TrailsMenu:
   TITLE: "&c&lTrails Menu"
   FLAME:
+    ENABLED: true
     NAME: "&6Flame Trail"
     LORE: "&7Click to apply the Flame Trail."
   HEART:
+    ENABLED: true
     NAME: "&6Heart Trail"
     LORE: "&7Click to apply the Heart Trail."
   SLIME:
+    ENABLED: true
     NAME: "&6Slime Trail"
     LORE: "&7Click to apply the Slime Trail."
   SMOKE:
+    ENABLED: true
     NAME: "&6Smoke Trail"
     LORE: "&7Click to apply the Smoke Trail."
   CRITICAL:
+    ENABLED: true
     NAME: "&6Critical Trail"
     LORE: "&7Click to apply the Critical Trail."
   NOTES:
+    ENABLED: true
     NAME: "&6Notes Trail"
     LORE: "&7Click to apply the Notes Trail."
   LAVA:
+    ENABLED: true
     NAME: "&6Lava Trail"
     LORE: "&7Click to apply the Lava Trail."
   WATER:
+    ENABLED: true
     NAME: "&6Water Trail"
     LORE: "&7Click to apply the Water Trail."
   CLOUD:
+    ENABLED: true
+    MATERIAL: "BARRIER"
     NAME: "&6Cloud Trail"
     LORE: "&7Click to apply the Cloud Trail."
   REMOVE-TRAIL:
+    MATERIAL: "BARRIER"
     NAME: "&cRemove Trail"
+    SLOT: 31
     LORE: "&7Remove your trail."

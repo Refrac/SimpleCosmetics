@@ -20,7 +20,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 /**
  * @author Zachary Baldwin / Refrac
  */
-public class CosmeticsMenu implements Listener {
+public class TrailsMenu implements Listener {
 
     public static String getTitle() {
         return Utils.getColor(Cosmetics.getInstance().getConfig().getString("TrailsMenu.TITLE"));
@@ -30,18 +30,37 @@ public class CosmeticsMenu implements Listener {
         return 36;
     }
 
-    public static void openTrailsMenu(Player p) {
+    public static void openMenu(Player p) {
         Inventory inv = Bukkit.createInventory(null, getSize(), getTitle());
 
-        inv.setItem(0, Trails.flameTrail());
-        inv.setItem(1, Trails.heartTrail());
-        inv.setItem(2, Trails.slimeTrail());
-        inv.setItem(3, Trails.smokeTrail());
-        inv.setItem(4, Trails.criticalTrail());
-        inv.setItem(5, Trails.notesTrail());
-        inv.setItem(6, Trails.lavaTrail());
-        inv.setItem(7, Trails.waterTrail());
-        inv.setItem(8, Trails.cloudTrail());
+        if (Cosmetics.getInstance().getConfig().getBoolean("TrailsMenu.FLAME.ENABLED")) {
+            inv.setItem(0, Trails.flameTrail());
+        }
+        if (Cosmetics.getInstance().getConfig().getBoolean("TrailsMenu.HEART.ENABLED")) {
+            inv.setItem(1, Trails.heartTrail());
+        }
+        if (Cosmetics.getInstance().getConfig().getBoolean("TrailsMenu.SLIME.ENABLED")) {
+            inv.setItem(2, Trails.slimeTrail());
+        }
+        if (Cosmetics.getInstance().getConfig().getBoolean("TrailsMenu.SMOKE.ENABLED")) {
+            inv.setItem(3, Trails.smokeTrail());
+        }
+        if (Cosmetics.getInstance().getConfig().getBoolean("TrailsMenu.CRITICAL.ENABLED")) {
+            inv.setItem(4, Trails.criticalTrail());
+        }
+        if (Cosmetics.getInstance().getConfig().getBoolean("TrailsMenu.NOTES.ENABLED")) {
+            inv.setItem(5, Trails.notesTrail());
+        }
+        if (Cosmetics.getInstance().getConfig().getBoolean("TrailsMenu.LAVA.ENABLED")) {
+            inv.setItem(6, Trails.lavaTrail());
+        }
+        if (Cosmetics.getInstance().getConfig().getBoolean("TrailsMenu.WATER.ENABLED")) {
+            inv.setItem(7, Trails.waterTrail());
+        }
+        if (Cosmetics.getInstance().getConfig().getBoolean("TrailsMenu.CLOUD.ENABLED")) {
+            inv.setItem(8, Trails.cloudTrail());
+        }
+
         inv.setItem(31, Trails.removeTrailsItem());
 
         for (int i = 0; i < 36; ++i) {
@@ -66,7 +85,7 @@ public class CosmeticsMenu implements Listener {
         Player player = (Player) event.getWhoClicked();
 
         if (event.getView() == null) return;
-        if (!event.getView().getTitle().equals(CosmeticsMenu.getTitle())) return;
+        if (!event.getView().getTitle().equals(getTitle())) return;
 
         if (event.getCurrentItem() == null) return;
         if (event.getCurrentItem().getType() == Material.AIR) return;
@@ -200,5 +219,4 @@ public class CosmeticsMenu implements Listener {
             }
         }
     }
-
 }

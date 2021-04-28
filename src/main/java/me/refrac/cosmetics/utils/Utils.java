@@ -15,7 +15,6 @@ import java.util.List;
  */
 public class Utils {
 
-    // TODO: Add MySQL Support as a secondary option
     public static List<String> flame = new ArrayList<>();
     public static List<String> heart = new ArrayList<>();
     public static List<String> slime = new ArrayList<>();
@@ -32,7 +31,11 @@ public class Utils {
 
     public static String getDeveloper = "Refrac";
     public static String getName = "SimpleCosmetics";
-    public static String getVersion = "1.1";
+    public static String getVersion = "1.2";
+    public static String getPluginURL = "https://www.spigotmc.org/resources/91660/";
+    public static String getDevMessage = ChatColor.RED + "This command can only be used by Refrac for support reasons.";
+    public static String getDevMessage2 = ChatColor.GRAY + "If you are worried about what this command does check it out on GitHub here:";
+    public static String getDevMessage3 = ChatColor.GRAY + "https://bit.ly/2QxLPqf";
     public static String PREFIX = getColor("&8[&b&lCosmetics&8] &r");
 
     public static void removeTrails(Player player) {

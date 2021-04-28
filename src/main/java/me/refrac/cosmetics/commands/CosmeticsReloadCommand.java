@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) Refrac
+ * If you have any questions please email refracplaysmc@gmail.com or reach me on Discord
+ */
 package me.refrac.cosmetics.commands;
 
 import me.refrac.cosmetics.Cosmetics;
@@ -6,6 +10,9 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 
+/**
+ * @author Zachary Baldwin / Refrac
+ */
 public class CosmeticsReloadCommand implements CommandExecutor {
 
     @Override

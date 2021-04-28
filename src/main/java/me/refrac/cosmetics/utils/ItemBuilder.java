@@ -163,7 +163,7 @@ public class ItemBuilder {
 
     @SuppressWarnings("deprecation")
     public ItemBuilder setDyeColor(DyeColor color) {
-        this.is.setDurability(color.getData());
+        this.is.setDurability(color.getDyeData());
         return this;
     }
 
@@ -171,7 +171,7 @@ public class ItemBuilder {
     public ItemBuilder setWoolColor(DyeColor color) {
         if (!is.getType().equals(Material.WOOL))
             return this;
-        this.is.setDurability(color.getData());
+        this.is.setDurability(color.getWoolData());
         return this;
     }
 
