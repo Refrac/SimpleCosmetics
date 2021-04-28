@@ -37,7 +37,7 @@ public class JoinListener implements Listener {
             player.sendMessage(ChatColor.RED + "Debug Message");
             player.sendMessage(" ");
             player.sendMessage(ChatColor.GREEN + "This server is using " + Utils.getName + " version " + Utils.getVersion);
-            player.sendMessage(ChatColor.GREEN + "Running " + Bukkit.getServer().getVersion());
+            player.sendMessage(ChatColor.GREEN + "Running " + Bukkit.getServer().getBukkitVersion());
             player.sendMessage(" ");
         }
     }
