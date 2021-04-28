@@ -53,11 +53,8 @@ TrailsMenu:
     LORE: "&7Click to apply the Water Trail."
   CLOUD:
     ENABLED: true
-    MATERIAL: "BARRIER"
     NAME: "&6Cloud Trail"
     LORE: "&7Click to apply the Cloud Trail."
   REMOVE-TRAIL:
-    MATERIAL: "BARRIER"
     NAME: "&cRemove Trail"
-    SLOT: 31
     LORE: "&7Remove your trail."
