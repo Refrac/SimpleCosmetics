@@ -1,7 +1,7 @@
 # SimpleCosmetics
 A simple plugin that currently supports Trails.
 
-If you have any suggestions feel free to let me know on [Discord](https://discord.gg/mUKjWZByzQ).
+If you have any suggestions feel free to let me know on [Discord](https://discord.gg/jVnmm7QnQU).
 
 ## Normal Installation
 
